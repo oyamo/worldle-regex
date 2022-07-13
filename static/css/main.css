@@ -1,0 +1,259 @@
+/**
+OYAMO BRAIAB ALL RIGHTS RESERVED
+ */
+
+html,body {
+    height: 90%;
+    width: 100%;
+}
+
+
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Expletus Sans', cursive;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+header h1{
+    font-family: 'Expletus Sans', cursive;
+    letter-spacing: 10px;
+    margin: 5px;
+}
+
+.logo:hover{
+    text-decoration: none;
+}
+
+
+.logo:focus{
+    text-decoration: none;
+}
+
+input {
+    width: 500px;
+    height: 30px;
+}
+
+.search_buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 90px;
+    width: 100%;
+    background-color: #eee;
+}
+
+nav h3{
+    margin: 5px;
+}
+
+
+input#after_search{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding-left: 7px;
+    height: 35px;
+    font-size:20px;
+}
+
+
+
+section{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.wiki_title{
+    font-size: 1.5em;
+}
+
+.wiki_title a{
+    color:#1717de;
+}
+
+.wiki_title a:visited{
+    color:purple;
+}
+
+.wiki_snippet{
+    width:500px;
+    padding-bottom: 15px;
+}
+
+.wiki_snippet_8{
+    padding-bottom:45px;
+}
+
+.search_buttons a{
+    width: 150px;
+    margin-left: 20px;
+}
+
+.btn-primary {
+
+    background-color: #eee;
+    border-color: #eee;
+    color: grey;
+    font-weight: bold;
+}
+
+.search_buttons a:hover{
+    color: black;
+    background-color: #eee;
+    border-color: #bfb4b4;
+}
+
+.error{
+    font-size:1.3em;
+}
+
+.after_search_container{
+    display: flex;
+    align-items: center;
+
+}
+
+.after_search_container span{
+    display: flex;
+    height: 35px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    background-color:#3369E8;
+    margin-left: -15px;
+    color: white;
+}
+
+.after_search_container span i{
+    margin-left: 6px;
+}
+
+.after_search_container span:hover{
+    cursor:pointer;
+}
+
+/*Media Query*/
+
+@media (min-width:521px) and (max-width:720px){
+    input#after_search {
+        width: 300px;
+    }
+
+    input#before_search{
+        width: 250px;
+    }
+
+    .wiki_snippet {
+        width: 350px;
+    }
+
+    section{
+        padding-left: 35px;
+    }
+}
+
+@media only screen and (max-width:520px)  {
+
+    input#before_search{
+        width: 250px;
+    }
+
+    input#after_search{
+        width: 250px;
+    }
+
+    .wiki_snippet {
+        width: 350px;
+    }
+
+    section{
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width:470px)  {
+
+    input#before_search{
+        width: 300px;
+    }
+
+    input#after_search{
+        width: 160px;
+    }
+
+    .wiki_snippet {
+        width: 330px;
+    }
+
+    section{
+        padding-left: 20px;
+    }
+}
+p{
+    text-align:center;
+}
+.footer {
+    font-face: arial;
+    font-size: 15px;
+    border-top: 1px solid black;
+    bottom: 20px;
+    width: 100%;
+    min-width: 350px;
+    padding: 1em 1em 0em 1em;
+    position: bottom;
+    display: flex;
+}
+.footer-logos {
+    position: bottom;
+    margin-top: -1em;
+    font-size: 10px;
+}
+.footer-logos a {
+    text-decoration: none;
+}
+.footer-logos i {
+
+    text-align: center;
+    margin: 0 0 1em 1em;
+    padding-top: .25em;
+    border: 1px solid rgba(100, 100, 100, .3);
+    border-radius: 25%;
+    vertical-align: -1.5em;
+}
+.footer-logos .genericon {
+    width: 2em;
+    height: 2em;
+}
+.footer-logos .fa {
+    width: 2em;
+    height: 2em;
+}
+.footer .container-fluid {
+    position: bottom;
+    display: flex;
+    max-width: 1000px;
+}

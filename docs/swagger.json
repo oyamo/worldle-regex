@@ -1,0 +1,15 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Wordle Hacker API",
+    "title": "Reegle",
+    "contact": {},
+    "version": "1.0"
+  },
+  "host": "localhost:8080",
+  "basePath": "/v1",
+  "paths": {
+
+        }
+
+}

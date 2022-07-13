@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Expletus+Sans:700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    <title>Reegle</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+<div  id="searched_results_display">
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <h1><span style="color:#3369E8">R</span><span style="color:#D50F25">e</span><span style="color:#EEB211">e</span><span
+                        style="color:#009925">gle</span>
+                    <h1>
+            </a>
+            <form method="get" action="/search" class="after_search_container">
+                <input type="text" id="after_search" name="regex" required/ >
+                <span><button class="glyphicon glyphicon-search btn-link"></button></span>
+            </form>
+        </nav>
+    </header>
+
+
+    <section class="wiki_results">
+
+        <p class="text-left">{{.Total}} Results in {{.Time}}sec</p>
+        <table class="table table-hover">
+            <tbody>
+            {{range .Results}}
+                {{if .}}
+                <tr>
+                    <th scope="row">{{.}}</th>
+                </tr>
+                {{end}}
+
+            {{end}}
+            </tbody>
+        </table>
+
+        <nav aria-label="Navigation">
+            <ul class="pagination pagination-lg justify-content-center">
+                {{if .HasPrev}}
+                    <li class="page-item"><a class="page-link" href="/search?regex={{.Regex}}&limit=20&offset={{.PreviousPage}}">Previous</a></li>
+                {{else}}
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+                {{end}}
+
+                {{if .HasNext}}
+                    {{range .PagesContent}}
+                       {{.}}
+                    {{end}}
+                {{else}}
+                <li class="page-item disabled">
+                    <span class="page-link">Next</span>
+                </li>
+                {{end}}
+
+            </ul>
+        </nav>
+    </section>
+</div>
+</body>
+</html>
